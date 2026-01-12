@@ -3,7 +3,7 @@ name: Demo Workflow
 on: push
 
 jobs:
-  demo:
+  build:
     runs-on: ubuntu-latest
     steps:
       - run: echo "CI/CD basics"
