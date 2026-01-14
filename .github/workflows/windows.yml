@@ -1,0 +1,10 @@
+name: Windows Runner Demo
+on: workflow_dispatch
+jobs:
+windows-job:
+   runs-on: windows-latest
+   steps:
+     - name: Show Windows info
+       run: systeminfo
+     - name: Print working directory
+       run: cd
