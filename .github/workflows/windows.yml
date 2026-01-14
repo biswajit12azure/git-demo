@@ -1,7 +1,7 @@
 name: Windows Runner Demo
 on: workflow_dispatch
 jobs:
-windows-job:
+  windows-job:
    runs-on: windows-latest
    steps:
      - name: Show Windows info
