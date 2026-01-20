@@ -1,0 +1,29 @@
+name: CI Build Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Validate repository
+        run: |
+          ls -l
+          pwd
+
+      - name: Run build script
+        run: |
+          chmod +x app.sh
+          ./app.sh
+
+      - name: Build success message
+        run: echo "Build completed successfully!"
+
